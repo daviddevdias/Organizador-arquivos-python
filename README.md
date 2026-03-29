@@ -1,31 +1,31 @@
-# 📁 Organizador Automático de Downloads
+# 📁 Python File Organizer
 
-Script em Python pra acabar com a bagunça da pasta de Downloads. 
+> **A automação que você precisava pra limpar sua pasta de Downloads em segundos.**
 
-Ele lê todos os arquivos soltos na pasta, checa a extensão de cada um e joga automaticamente pras subpastas certas (Imagens, Documentos, Programas, etc.). 
-
-Fiz isso porque minha pasta de Downloads tava virando um buraco negro de arquivos perdidos.
+Cansado de ver sua pasta de Downloads virar um "buraco negro" de arquivos perdidos? Eu também. Por isso criei esse script simples em Python que faz a faxina pesada por você, separando tudo por categorias de forma automática.
 
 ---
 
-## ⚙️ Como funciona
-O script usa as bibliotecas nativas `pathlib` e `shutil` do Python. Você não precisa instalar nada de fora (nenhum `pip install` é necessário).
+## 🚀 O que ele faz?
+O script varre a pasta escolhida, identifica o tipo de cada arquivo e o move para a subpasta correta:
 
-Ele já vem configurado pra organizar essas extensões:
-* **Imagens:** `.jpg`, `.png`, `.svg`, etc.
-* **Documentos:** `.pdf`, `.docx`, `.xlsx`, etc.
-* **Programas:** `.exe`, `.msi`
-* **Compactados:** `.zip`, `.rar`, `.7z`
-* **Vídeos e Áudios:** `.mp4`, `.mp3`, etc.
-* *Qualquer outra extensão:* Vai para uma pasta "Outros".
+* **📸 Imagens:** `.jpg`, `.png`, `.svg`, `.webp`...
+* **📄 Documentos:** `.pdf`, `.docx`, `.xlsx`, `.txt`...
+* **⚙️ Programas:** `.exe`, `.msi`, `.bat`
+* **📦 Compactados:** `.zip`, `.rar`, `.7z`
+* **🎬 Multimídia:** `.mp4`, `.mp3`, `.mov`
+* **📂 Outros:** Qualquer extensão que não esteja na lista.
 
 ---
 
 ## 🛠️ Como usar na sua máquina
 
-### 1. Ajuste o caminho da pasta
-Abre o script `.py` no seu editor e altera a variável `pasta_alvo` na linha 6 para o caminho da sua pasta de Downloads. 
+### 1. Zero dependências
+Como o script usa apenas bibliotecas nativas do Python (`pathlib` e `shutil`), você **não precisa instalar nada via pip**. É só baixar e rodar.
 
-Por exemplo:
+### 2. Configurar o caminho
+Abra o arquivo `organizador.py` e ajuste a variável `pasta_alvo` com o caminho da pasta que você quer limpar:
+
 ```python
+# Exemplo para Windows:
 pasta_alvo = Path(r"C:\Users\SeuUsuario\Downloads")
